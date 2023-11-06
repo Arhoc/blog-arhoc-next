@@ -7,10 +7,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   return (
-    <div>
-      <pre><code className="language-c">
-        #include &lt;stdio.h&gt;
-      </code></pre>
+    <>
 
       <section className="hero is-info is-large banner">
         <div className="hero-head">
@@ -86,6 +83,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-    </div>
+    </>
   );
 }
