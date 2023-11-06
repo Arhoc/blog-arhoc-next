@@ -151,8 +151,8 @@ export default function InjectionSeriesWriteup() {
                     <h1 className="title has-text-light">Primeras Nociones</h1>
 
                     <div className="content">
-                        <p>&quot;Realiza ingeniería inversa sobre el programa dado y analiza su comportamiento.
-                            Puedes utilizar cualquier desensamblador que desees para completar este desafío.&quot;</p>
+                        <p>{`&quot;Realiza ingeniería inversa sobre el programa dado y analiza su comportamiento.
+                            Puedes utilizar cualquier desensamblador que desees para completar este desafío.&quot;`}</p>
 
                         <p>Es el texto con el que se nos presenta este desafío, y si observamos bien, veremos que contiene el
                             archivo ejecutable justo debajo de esta:</p>
