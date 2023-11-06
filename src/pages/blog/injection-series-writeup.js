@@ -151,8 +151,8 @@ export default function InjectionSeriesWriteup() {
                     <h1 className="title has-text-light">Primeras Nociones</h1>
 
                     <div className="content">
-                        <p>"Realiza ingeniería inversa sobre el programa dado y analiza su comportamiento.
-                            Puedes utilizar cualquier desensamblador que desees para completar este desafío."</p>
+                        <p>&quot;Realiza ingeniería inversa sobre el programa dado y analiza su comportamiento.
+                            Puedes utilizar cualquier desensamblador que desees para completar este desafío.&quot;</p>
 
                         <p>Es el texto con el que se nos presenta este desafío, y si observamos bien, veremos que contiene el
                             archivo ejecutable justo debajo de esta:</p>
@@ -160,7 +160,7 @@ export default function InjectionSeriesWriteup() {
                         <img src="/assets/Injection-Series/iseries4-ss1.png"></img>
 
                         <p>Entonces descomprimimos el archivo con la contraseña mostrada en la página del &quot;challenge&quot; o desafío,
-                            entonces, una vez descomprimido, nos topamos con que incluye un ejecutable MS-DOS llamado &quot;re4.exe". Al
+                            entonces, una vez descomprimido, nos topamos con que incluye un ejecutable MS-DOS llamado &quot;re4.exe&quot;. Al
                             descomprimirlo, lo primero que se me pasa por la cabeza es revisar los strings, entonces, procedo a
                             hacerlo y me encuentro con algo curioso:</p>
 
@@ -175,7 +175,7 @@ export default function InjectionSeriesWriteup() {
                             className="has-text-danger">somec2.server</span>, usando <span
                                 className="has-text-danger">Invoke-WebRequest</span> y lo guarda en <span
                                     className="has-text-danger">C:\\windows\\temp\\exp.exe</span>, además de eso, notamos la presencia de
-                            &quot;notepad.exe", creo que más adelante revisaremos eso... Con esto tenemos la respuesta de las preguntas 3
+                            &quot;notepad.exe&quot;, creo que más adelante revisaremos eso... Con esto tenemos la respuesta de las preguntas 3
                             y 4.</p>
                         <p>Abramos este ejecutable entonces en <a className="has-text-link"
                             href="https://es.wikipedia.org/wiki/Ghidra">GHidra</a>.</p>
@@ -197,7 +197,7 @@ export default function InjectionSeriesWriteup() {
 
                         <p>Nos damos entonces cuenta de que se está invocando el proceso &quot;<span
                             className="has-text-danger">notepad.exe</span>&quot; a través de la llamada &quot;<span
-                                className="has-text-danger">CreateProcessA</span>", la cual: </p>
+                                className="has-text-danger">CreateProcessA</span>&quot;, la cual: </p>
 
                         <p>CreateProcessA es una función de la API de Windows utilizada para crear un nuevo proceso en un entorno
                             Windows. Esta función permite a los programadores iniciar un nuevo programa como un proceso
@@ -259,10 +259,10 @@ export default function InjectionSeriesWriteup() {
                 <div className="box has-background-black-ter has-text-light has-text-left mt-5">
                     <div className="content">
                         <p>La quinta pregunta se nos plantea como &quot;Justo después de las instrucciones de descarga del archivo, una
-                            función de ntdll ha sido cargada e invocada por la muestra. ¿Cuál es el nombre de la función?"</p>
+                            función de ntdll ha sido cargada e invocada por la muestra. ¿Cuál es el nombre de la función?&quot;</p>
                         <p>No hace falta ser un grandioso observador para darse cuenta, por lo que simplemente observamos el código
                             descompilado y buscamos alguna función relacionada, hasta terminar encontrando llamadas a la función
-                            &quot;<span className="has-text-danger">NtUnmapViewOfSection</span>"</p>
+                            &quot;<span className="has-text-danger">NtUnmapViewOfSection</span>&quot;</p>
                         <p>La función NtUnmapViewOfSection en Windows se utiliza para descartar una vista de memoria virtual
                             previamente mapeada a partir de una sección de memoria. Esto significa que se desvincula una región
                             específica de la memoria virtual de una sección de memoria, liberando así los recursos asociados con esa
@@ -286,7 +286,7 @@ export default function InjectionSeriesWriteup() {
                     <div className="content">
                         <p>La sexta pregunta nos dice entonces: &quot;Después de la asignación de memoria y escribir la fecha en la
                             memoria asignada. ¿Cuáles son las 2 API utilizadas para actualizar el punto de entrada y reanudar el
-                            hilo?"</p>
+                            hilo?&quot;</p>
 
                         <p>Habiendo contestado ya la segunda pregunta, no debería ser muy difícil intuír de qué función nos podría
                             estar hablando, ¿verdad?</p>
