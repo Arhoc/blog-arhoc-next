@@ -77,7 +77,7 @@ export default function Home() {
               <section className="hero is-halfheight injection-banner m-4">
                 <div className="container has-text-centered">
                   <h1 className="title has-text-light is-size-3 m-2">Post: Injection Series Part 4</h1>
-                  <h2 className="subtitle has-text-grey-lighter mt-2">WriteUp de la cuarta parte del challenge &ldquo;Injection Series&ldquo;,
+                  <h2 className="subtitle has-text-grey-lighter mt-2">WriteUp de la cuarta parte del challenge &quot;Injection Series&quot;,
                     donde se
                     tratan temas referentes a la ingeniería inversa.</h2>
                 </div>

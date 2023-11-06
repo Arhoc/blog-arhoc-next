@@ -159,8 +159,8 @@ export default function InjectionSeriesWriteup() {
 
                         <img src="/assets/Injection-Series/iseries4-ss1.png"></img>
 
-                        <p>Entonces descomprimimos el archivo con la contraseña mostrada en la página del "challenge" o desafío,
-                            entonces, una vez descomprimido, nos topamos con que incluye un ejecutable MS-DOS llamado "re4.exe". Al
+                        <p>Entonces descomprimimos el archivo con la contraseña mostrada en la página del &quot;challenge&quot; o desafío,
+                            entonces, una vez descomprimido, nos topamos con que incluye un ejecutable MS-DOS llamado &quot;re4.exe". Al
                             descomprimirlo, lo primero que se me pasa por la cabeza es revisar los strings, entonces, procedo a
                             hacerlo y me encuentro con algo curioso:</p>
 
@@ -175,7 +175,7 @@ export default function InjectionSeriesWriteup() {
                             className="has-text-danger">somec2.server</span>, usando <span
                                 className="has-text-danger">Invoke-WebRequest</span> y lo guarda en <span
                                     className="has-text-danger">C:\\windows\\temp\\exp.exe</span>, además de eso, notamos la presencia de
-                            "notepad.exe", creo que más adelante revisaremos eso... Con esto tenemos la respuesta de las preguntas 3
+                            &quot;notepad.exe", creo que más adelante revisaremos eso... Con esto tenemos la respuesta de las preguntas 3
                             y 4.</p>
                         <p>Abramos este ejecutable entonces en <a className="has-text-link"
                             href="https://es.wikipedia.org/wiki/Ghidra">GHidra</a>.</p>
@@ -195,8 +195,8 @@ export default function InjectionSeriesWriteup() {
 
                         <img src="/assets/Injection-Series/iseries4-ss4.png"></img>
 
-                        <p>Nos damos entonces cuenta de que se está invocando el proceso "<span
-                            className="has-text-danger">notepad.exe</span>" a través de la llamada "<span
+                        <p>Nos damos entonces cuenta de que se está invocando el proceso &quot;<span
+                            className="has-text-danger">notepad.exe</span>&quot; a través de la llamada &quot;<span
                                 className="has-text-danger">CreateProcessA</span>", la cual: </p>
 
                         <p>CreateProcessA es una función de la API de Windows utilizada para crear un nuevo proceso en un entorno
@@ -205,8 +205,8 @@ export default function InjectionSeriesWriteup() {
                             ruta al archivo ejecutable que se desea lanzar, los argumentos de la línea de comandos, información
                             sobre el proceso hijo y opciones de creación del proceso. Esta función es ampliamente utilizada en la
                             programación de aplicaciones para Windows para iniciar nuevos programas y realizar tareas de gestión de
-                            procesos. La "A" en CreateProcessA se refiere a la versión ANSI de la función, que maneja cadenas de
-                            caracteres en formato ANSI, mientras que existe una versión "W" (CreateProcessW) que maneja cadenas de
+                            procesos. La &quot;A&quot; en CreateProcessA se refiere a la versión ANSI de la función, que maneja cadenas de
+                            caracteres en formato ANSI, mientras que existe una versión &quot;W&quot; (CreateProcessW) que maneja cadenas de
                             caracteres en formato Unicode (UTF-16).</p>
 
                         <p>Tenemos ya entonces la respuesta a nuestra primer pregunta, <span className="is-underlined">¿verdad?</span>
@@ -242,11 +242,11 @@ export default function InjectionSeriesWriteup() {
                         <SyntaxHighlighter language="nasm" style={style}>{asm_code}</SyntaxHighlighter>
                         <SyntaxHighlighter language="nasm" style={style}>{asm_decoded}</SyntaxHighlighter>
 
-                        <p>Nos daremos cuenta de que se pasa "4" como valor al argumento dwCreationFlags, entonces, si nos vamos a
+                        <p>Nos daremos cuenta de que se pasa &quot;4&quot; como valor al argumento dwCreationFlags, entonces, si nos vamos a
                             la documentación de la API de windows en el header procthread.h, nos muestra que el flag correspondiente
-                            al valor "0x00000004" es <span className="has-text-danger">CREATE_SUSPENDED</span>, y nos muestra: <br />
+                            al valor &quot;0x00000004&quot; es <span className="has-text-danger">CREATE_SUSPENDED</span>, y nos muestra: <br />
 
-                            "El hilo primario del nuevo proceso se crea en un estado suspendido, y no se ejecuta hasta que se llama
+                            &quot;El hilo primario del nuevo proceso se crea en un estado suspendido, y no se ejecuta hasta que se llama
                             a la función <span className="has-text-danger">ResumeThread</span>. <br />
 
                             <span className="is-underlined">Tenemos ya la segunda pregunta.</span>
@@ -258,11 +258,11 @@ export default function InjectionSeriesWriteup() {
             <section className="container">
                 <div className="box has-background-black-ter has-text-light has-text-left mt-5">
                     <div className="content">
-                        <p>La quinta pregunta se nos plantea como "Justo después de las instrucciones de descarga del archivo, una
+                        <p>La quinta pregunta se nos plantea como &quot;Justo después de las instrucciones de descarga del archivo, una
                             función de ntdll ha sido cargada e invocada por la muestra. ¿Cuál es el nombre de la función?"</p>
                         <p>No hace falta ser un grandioso observador para darse cuenta, por lo que simplemente observamos el código
                             descompilado y buscamos alguna función relacionada, hasta terminar encontrando llamadas a la función
-                            "<span className="has-text-danger">NtUnmapViewOfSection</span>"</p>
+                            &quot;<span className="has-text-danger">NtUnmapViewOfSection</span>"</p>
                         <p>La función NtUnmapViewOfSection en Windows se utiliza para descartar una vista de memoria virtual
                             previamente mapeada a partir de una sección de memoria. Esto significa que se desvincula una región
                             específica de la memoria virtual de una sección de memoria, liberando así los recursos asociados con esa
@@ -284,7 +284,7 @@ export default function InjectionSeriesWriteup() {
             <section className="container">
                 <div className="box has-background-black-ter has-text-light has-text-left mt-5">
                     <div className="content">
-                        <p>La sexta pregunta nos dice entonces: "Después de la asignación de memoria y escribir la fecha en la
+                        <p>La sexta pregunta nos dice entonces: &quot;Después de la asignación de memoria y escribir la fecha en la
                             memoria asignada. ¿Cuáles son las 2 API utilizadas para actualizar el punto de entrada y reanudar el
                             hilo?"</p>
 
