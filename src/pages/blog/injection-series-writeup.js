@@ -157,14 +157,14 @@ export default function InjectionSeriesWriteup() {
                         <p>Es el texto con el que se nos presenta este desafío, y si observamos bien, veremos que contiene el
                             archivo ejecutable justo debajo de esta:</p>
 
-                        <Image fill src="/assets/Injection-Series/iseries4-ss1.png"></Image>
+                        <img fill src="/assets/Injection-Series/iseries4-ss1.png"></img>
 
                         <p>Entonces descomprimimos el archivo con la contraseña mostrada en la página del &quot;challenge&quot; o desafío,
                             entonces, una vez descomprimido, nos topamos con que incluye un ejecutable MS-DOS llamado &quot;re4.exe&quot;. Al
                             descomprimirlo, lo primero que se me pasa por la cabeza es revisar los strings, entonces, procedo a
                             hacerlo y me encuentro con algo curioso:</p>
 
-                        <Image fill={true} src="/assets/Injection-Series/iseries4-ss2.png"></Image>
+                        <img fill={true} src="/assets/Injection-Series/iseries4-ss2.png"></img>
 
                         <p>¿Alcanzas a divisar algo extraño en esta pequeña imágen?</p>
                         <p>Comenzando por el hecho de que ejecuta un código powershell que se encuentra codificado en base64, y al
@@ -188,12 +188,12 @@ export default function InjectionSeriesWriteup() {
                     <h1 className="title has-text-light enable-line-break">Análisis y descompilación con GHidra</h1>
 
                     <div className="content">
-                        <Image fill={true} src="/assets/Injection-Series/iseries4-ss3.png"></Image>
+                        <img fill={true} src="/assets/Injection-Series/iseries4-ss3.png"></img>
 
                         <p>Entonces, ¿recuerdas la aparición de Notepad.exe en los strings del ejecutable?, pues ahora es importante
                             disponernos a analizar exactamente qué estaba haciendo el pobre notepad ahí, por lo que entonces:</p>
 
-                        <Image fill={true} src="/assets/Injection-Series/iseries4-ss4.png"></Image>
+                        <img fill={true} src="/assets/Injection-Series/iseries4-ss4.png"></img>
 
                         <p>Nos damos entonces cuenta de que se está invocando el proceso &quot;<span
                             className="has-text-danger">notepad.exe</span>&quot; a través de la llamada &quot;<span
@@ -276,7 +276,7 @@ export default function InjectionSeriesWriteup() {
                             aplicación de usuario. Esto podría dar lugar a problemas de seguridad y escalada de privilegios si se
                             explotan vulnerabilidades en el sistema operativo.</p>
 
-                        <Image fill={true} src="/assets/Injection-Series/iseries4-ss4.png"></Image>
+                        <img fill={true} src="/assets/Injection-Series/iseries4-ss4.png"></img>
                     </div>
                 </div>
             </section>
@@ -291,7 +291,7 @@ export default function InjectionSeriesWriteup() {
                         <p>Habiendo contestado ya la segunda pregunta, no debería ser muy difícil intuír de qué función nos podría
                             estar hablando, ¿verdad?</p>
 
-                        <Image fill={true} src="/assets/Injection-Series/iseries4-ss5.png"></Image>
+                        <img fill={true} src="/assets/Injection-Series/iseries4-ss5.png"></img>
 
                         <p><span className="has-text-danger">SetThreadContext</span> es una función de la API de Windows que se utiliza
                             para establecer el contexto de un subproceso con los valores modificados. En este caso, se utiliza para
@@ -310,7 +310,7 @@ export default function InjectionSeriesWriteup() {
                 <div className="box has-background-black-ter has-text-light has-text-left mt-5">
                     <div className="content">
                         <h1 className="title has-text-light">Resumen de lo encontrado</h1>
-                        <Image fill={true} src="/assets/Injection-Series/iseries4-ss7.png"></Image>
+                        <img fill={true} src="/assets/Injection-Series/iseries4-ss7.png"></img>
 
                         <p>La técnica MITRE empleada es la inyección de procesos, esta se da cuando un programa malicioso injerta
                             código malicioso dentro de otro proceso, consiguiendo así escalar privilegios.</p>
