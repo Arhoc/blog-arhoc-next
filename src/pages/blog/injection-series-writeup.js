@@ -87,7 +87,7 @@ export default function InjectionSeriesWriteup() {
                     <nav className="navbar">
                         <div className="container">
                             <div className="navbar-brand">
-                                <a className="navbar-item" href="/home">
+                                <a className="navbar-item" href="/">
                                     <h1 className="title has-text-light" style={{ fontFamily: 'Share Tech Mono' }}>FORENSE EN POTENCIA</h1>
                                 </a>
                                 <span className="navbar-burger" data-target="navbarMenuHeroB">
@@ -98,7 +98,7 @@ export default function InjectionSeriesWriteup() {
                             </div>
                             <div id="navbarMenuHeroB" className="navbar-menu">
                                 <div className="navbar-end">
-                                    <a className="navbar-item" href="/home">
+                                    <a className="navbar-item" href="/">
                                         Principal
                                     </a>
                                     <a className="navbar-item">
