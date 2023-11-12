@@ -6,8 +6,6 @@ import styles from '@/styles/Home.module.css'
 import { useEffect, useState } from 'react'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 
-import { sql } from "@vercel/postgres";
-
 const inter = Inter({ subsets: ['latin'] })
 
 const c_code = `BOOL CreateProcessA(
@@ -81,13 +79,9 @@ export default function InjectionSeriesWriteup() {
     .then(mod => setStyle(mod.default));
   })
 
-  const {rows} = sql`SELECT * from BlogEntry;`;
 
     return (
         <>
-
-        <h1>{rows}</h1>
-        
             <section className="hero is-info is-large banner">
                 <div className="hero-head">
                     <nav className="navbar">
