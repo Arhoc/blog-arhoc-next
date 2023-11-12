@@ -3,12 +3,19 @@ import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
 
+import { sql } from "@vercel/postgres";
+
 const inter = Inter({ subsets: ['latin'] })
 
+const {rows, fields} = await sql`select title from blogentry where post_id = 1;`;
+
+console.log(rows);
+console.log(fields);
+
 export default function Home() {
+
   return (
     <>
-
       <section className="hero is-info is-large banner">
         <div className="hero-head">
           <nav className="navbar">
