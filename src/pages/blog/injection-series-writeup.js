@@ -157,7 +157,7 @@ export default function InjectionSeriesWriteup() {
                         <p>Es el texto con el que se nos presenta este desafío, y si observamos bien, veremos que contiene el
                             archivo ejecutable justo debajo de esta:</p>
 
-                        <Image fill={true} src="/assets/Injection-Series/iseries4-ss1.png"></Image>
+                        <Image src="/assets/Injection-Series/iseries4-ss1.png"></Image>
 
                         <p>Entonces descomprimimos el archivo con la contraseña mostrada en la página del &quot;challenge&quot; o desafío,
                             entonces, una vez descomprimido, nos topamos con que incluye un ejecutable MS-DOS llamado &quot;re4.exe&quot;. Al
