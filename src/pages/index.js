@@ -3,7 +3,7 @@ import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
 
-import { sql } from "@vercel/postgres";
+//import { sql } from "@vercel/postgres";
 
 const inter = Inter({ subsets: ['latin'] })
 
