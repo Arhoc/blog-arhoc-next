@@ -7,7 +7,7 @@ import styles from '@/styles/Home.module.css'
 
 const inter = Inter({ subsets: ['latin'] })
 
-const {rows, fields} = await sql`select title from blogentry where post_id = 1;`;
+//const {rows, fields} = await sql`select title from blogentry where post_id = 1;`;
 
 console.log(rows);
 console.log(fields);
