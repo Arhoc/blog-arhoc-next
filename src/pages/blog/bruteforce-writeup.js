@@ -1,3 +1,11 @@
+import Head from 'next/head'
+import Image from 'next/image'
+import { Inter } from 'next/font/google'
+import styles from '@/styles/Home.module.css'
+
+import { useEffect, useState } from 'react'
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+
 export default function BruteForceWriteup() {
     first_ls = `[arhoc@ArchLinux Bruteforce ]$ ls -la
   total 11976
