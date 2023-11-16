@@ -7,6 +7,12 @@ import { useEffect, useState } from 'react'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 
 export default function BruteForceWriteup() {
+    const [ style, setStyle ] = useState({})
+  useEffect(() => {
+    import('react-syntax-highlighter/dist/cjs/styles/prism/twilight')
+    .then(mod => setStyle(mod.default));
+  })
+
     const first_ls = `[arhoc@ArchLinux Bruteforce ]$ ls -la
   total 11976
   drwxr-xr-x 2 arhoc arhoc    4096 Nov  4 14:26  ./
@@ -238,19 +244,19 @@ export default function BruteForceWriteup() {
                     <h1 className="title has-text-light">Resolución del challenge</h1>
 
                     <div className="content">
-                        <pre><code className="language-bash">{{ first_ls }}</code></pre>
+                        <SyntaxHighlighter style={style} className="language-bash">{ first_ls }</SyntaxHighlighter>
 
                         <p>Según vemos, el zip contenía tres archivos, así que damos un primer vistazo al contenido con 'less', para evitar cualquier carácter no deseado o no imprimible que nos arruine la terminal.</p>
 
-                        <pre><code className="language-ruby">{{ less_txt }}</code></pre>
+                        <SyntaxHighlighter style={style} className="language-ruby">{ less_txt }</SyntaxHighlighter>
 
                         <p>Observamos la estructura general del registro, además, vemos que la dirección ip <span className="has-text-danger">113.161.192.227</span> está realizando el ataque, intentando forzar el usuario <span className="has-text-danger">administrator</span>, además, vemos que el evento del ID fué <span className="has-text-danger">4625</span>, entonces, usando expresiones regulares con la utilidad grep, y wc obtenemos cuantos ataques de fuerza bruta fueron realizados.</p>
-                        <pre><code className="language-bash">[arhoc@ArchLinux Bruteforce ]$ cat BTLO_Bruteforce_Challenge.txt | grep "Unknown user" | wc -l
-                            3103</code></pre>
+                        <SyntaxHighlighter style={style} className="language-bash">[arhoc@ArchLinux Bruteforce ]$ cat BTLO_Bruteforce_Challenge.txt | grep "Unknown user" | wc -l
+                            3103</SyntaxHighlighter>
 
                         <p>Haciendo una simple consulta WHOIS, nos daremos cuenta de que la dirección IP que intentó el ataque se encontraba en <span className="has-text-danger">Vietnam</span>.</p>
                         <p>Entonces, obtenemos los primeros y últimos puertos que nos muestra el registro, esto lo realizamos de manera sencilla haciendo uso de grep, awk, sort, head y tail.</p>
-                        <pre><code className="language-bash">{{ ports_range }}</code></pre>
+                        <SyntaxHighlighter style={style} className="language-bash">{ ports_range }</SyntaxHighlighter>
 
                         <p>Por lo tanto, el rango de puertos analizado se encuentra en <span className="has-text-danger">49162-65534</span>, y con esto concluímos el challenge.</p>
                     </div>
