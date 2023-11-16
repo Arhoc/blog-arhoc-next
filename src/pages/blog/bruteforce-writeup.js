@@ -133,68 +133,69 @@ export default function BruteForceWriteup() {
 
 
 
-    return <>
+    return (
+        <>
 
-        <section class="hero is-info is-large banner">
-            <div class="hero-head">
-                <nav class="navbar">
-                    <div class="container">
-                        <div class="navbar-brand">
-                            <a class="navbar-item" href="/home">
-                                <h1 class="title has-text-light" style="font-family: 'Share Tech Mono';">FORENSE EN POTENCIA
-                                </h1>
-                            </a>
-                            <span class="navbar-burger" data-target="navbarMenuHeroB">
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                            </span>
-                        </div>
-                        <div id="navbarMenuHeroB" class="navbar-menu">
-                            <div class="navbar-end">
+            <section class="hero is-info is-large banner">
+                <div class="hero-head">
+                    <nav class="navbar">
+                        <div class="container">
+                            <div class="navbar-brand">
                                 <a class="navbar-item" href="/home">
-                                    Principal
+                                    <h1 class="title has-text-light" style="font-family: 'Share Tech Mono';">FORENSE EN POTENCIA
+                                    </h1>
                                 </a>
-                                <a class="navbar-item">
-                                    Blog
-                                </a>
-                                <a class="navbar-item">
-                                    Contacto
-                                </a>
+                                <span class="navbar-burger" data-target="navbarMenuHeroB">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </span>
+                            </div>
+                            <div id="navbarMenuHeroB" class="navbar-menu">
+                                <div class="navbar-end">
+                                    <a class="navbar-item" href="/home">
+                                        Principal
+                                    </a>
+                                    <a class="navbar-item">
+                                        Blog
+                                    </a>
+                                    <a class="navbar-item">
+                                        Contacto
+                                    </a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </nav>
-            </div>
-
-            <div class="hero-body">
-                <div class="container has-text-centered">
-                    <p class="title">
-                        Bruteforce: Blue Team Labs
-                    </p>
-                    <p class="subtitle">
-                        WriteUp Detallado
-                    </p>
+                    </nav>
                 </div>
-            </div>
-        </section>
 
-        <section class="container">
-            <div class="box has-background-black-ter has-text-light has-text-left mt-5">
-                <h1 class="title has-text-light">Primeras nociones</h1>
+                <div class="hero-body">
+                    <div class="container has-text-centered">
+                        <p class="title">
+                            Bruteforce: Blue Team Labs
+                        </p>
+                        <p class="subtitle">
+                            WriteUp Detallado
+                        </p>
+                    </div>
+                </div>
+            </section>
 
-                <div class="content">
-                    <p><span class="has-text-weight-bold">"Can you analyze logs from an attempted RDP bruteforce attack?</span>
-                        One of our system administrators identified a large number of Audit Failure events in the Windows
-                        Security Event log.
-                        There are a number of different ways to approach the analysis of these logs! Consider the suggested
-                        tools, but there are many others out there!"</p>
+            <section class="container">
+                <div class="box has-background-black-ter has-text-light has-text-left mt-5">
+                    <h1 class="title has-text-light">Primeras nociones</h1>
 
-                    <p>Si no nos falla el inglés, habremos visto que se nos está proporcionando un registro (log) de un ataque
-                        de fuerza bruta vía RDP, pero sabemos que es lo que esto significa?</p>
+                    <div class="content">
+                        <p><span class="has-text-weight-bold">"Can you analyze logs from an attempted RDP bruteforce attack?</span>
+                            One of our system administrators identified a large number of Audit Failure events in the Windows
+                            Security Event log.
+                            There are a number of different ways to approach the analysis of these logs! Consider the suggested
+                            tools, but there are many others out there!"</p>
 
-                    <h2 class="subtitle has-text-light">¿Qué es RDP?</h2>
-                    <img src="https://i.pinimg.com/736x/b7/4e/e4/b74ee442c718ef42d990310f01475e4f.jpg"></img>
+                        <p>Si no nos falla el inglés, habremos visto que se nos está proporcionando un registro (log) de un ataque
+                            de fuerza bruta vía RDP, pero sabemos que es lo que esto significa?</p>
+
+                        <h2 class="subtitle has-text-light">¿Qué es RDP?</h2>
+                        <img src="https://i.pinimg.com/736x/b7/4e/e4/b74ee442c718ef42d990310f01475e4f.jpg"></img>
                         <p>RDP son las siglas de Remote Desktop Protocol, o Protocolo de Escritorio Remoto en español.</p>
                         <p>Es un protocolo desarrollado por Microsoft que permite a un usuario conectarse a un ordenador remoto y
                             controlarlo como si estuviera sentado frente a él.</p>
@@ -210,43 +211,44 @@ export default function BruteForceWriteup() {
 
                         <h2 class="subtitle has-text-light">¿Qué es un ataque de fuerza bruta?</h2>
                         <img src="https://themerkle.com/wp-content/uploads-new/2017/01/shutterstock_352183106.jpg"></img>
-                            <p>Los ataques de fuerza bruta son un tipo de ataque en el que un atacante intenta adivinar la contraseña de un usuario mediante la repetición de combinaciones de caracteres hasta que encuentra la correcta. Este tipo de ataque es particularmente efectivo contra el acceso RDP, ya que los atacantes pueden automatizar el proceso de adivinación de contraseñas, similar a los ataques de diccionario, donde se usa un conjunto masivo de contraseñas comunes.</p>
-                            <p>Para protegerte de este tipo de ataques, es necesario atenerte a una serie de principios:</p>
-                            <ul>
-                                <li><span class="has-text-weight-bold has-text-warning">Utiliza contraseñas seguras</span>: Las contraseñas seguras son aquellas que son largas, complejas y únicas. Una buena contraseña debe tener al menos 12 caracteres y combinar letras, números y símbolos.</li>
-                                <li><span class="has-text-weight-bold has-text-warning">No utilices la misma contraseña para todos tus servicios</span>: Si un atacante obtiene una de tus contraseñas, podrá utilizarla para acceder a todos tus servicios si las contraseñas son las mismas.</li>
-                                <li><span class="has-text-weight-bold has-text-warning">Cambia tus contraseñas con regularidad</span>: Esto ayudará a protegerte de ataques de fuerza bruta que se basan en contraseñas antiguas</li>
-                                <li><span class="has-text-weight-bold has-text-warning">Evita utilizar contraseñas que se puedan adivinar fácilmente</span>: Esto incluye contraseñas que contengan tu nombre, fecha de nacimiento o información personal similar.</li>
-                            </ul>
+                        <p>Los ataques de fuerza bruta son un tipo de ataque en el que un atacante intenta adivinar la contraseña de un usuario mediante la repetición de combinaciones de caracteres hasta que encuentra la correcta. Este tipo de ataque es particularmente efectivo contra el acceso RDP, ya que los atacantes pueden automatizar el proceso de adivinación de contraseñas, similar a los ataques de diccionario, donde se usa un conjunto masivo de contraseñas comunes.</p>
+                        <p>Para protegerte de este tipo de ataques, es necesario atenerte a una serie de principios:</p>
+                        <ul>
+                            <li><span class="has-text-weight-bold has-text-warning">Utiliza contraseñas seguras</span>: Las contraseñas seguras son aquellas que son largas, complejas y únicas. Una buena contraseña debe tener al menos 12 caracteres y combinar letras, números y símbolos.</li>
+                            <li><span class="has-text-weight-bold has-text-warning">No utilices la misma contraseña para todos tus servicios</span>: Si un atacante obtiene una de tus contraseñas, podrá utilizarla para acceder a todos tus servicios si las contraseñas son las mismas.</li>
+                            <li><span class="has-text-weight-bold has-text-warning">Cambia tus contraseñas con regularidad</span>: Esto ayudará a protegerte de ataques de fuerza bruta que se basan en contraseñas antiguas</li>
+                            <li><span class="has-text-weight-bold has-text-warning">Evita utilizar contraseñas que se puedan adivinar fácilmente</span>: Esto incluye contraseñas que contengan tu nombre, fecha de nacimiento o información personal similar.</li>
+                        </ul>
 
-                            <p>Una vez sabido esto, ¿por qué no resolvemos el challenge?</p>
-                        </div>
+                        <p>Una vez sabido esto, ¿por qué no resolvemos el challenge?</p>
+                    </div>
                 </div>
-        </section>
+            </section>
 
-        <section class="container">
-            <div class="box has-background-black-ter has-text-light has-text-left mt-5">
-                <h1 class="title has-text-light">Resolución del challenge</h1>
+            <section class="container">
+                <div class="box has-background-black-ter has-text-light has-text-left mt-5">
+                    <h1 class="title has-text-light">Resolución del challenge</h1>
 
-                <div class="content">
-                    <pre><code class="language-bash">{{ first_ls }}</code></pre>
+                    <div class="content">
+                        <pre><code class="language-bash">{{ first_ls }}</code></pre>
 
-                    <p>Según vemos, el zip contenía tres archivos, así que damos un primer vistazo al contenido con 'less', para evitar cualquier carácter no deseado o no imprimible que nos arruine la terminal.</p>
+                        <p>Según vemos, el zip contenía tres archivos, así que damos un primer vistazo al contenido con 'less', para evitar cualquier carácter no deseado o no imprimible que nos arruine la terminal.</p>
 
-                    <pre><code class="language-ruby">{{ less_txt }}</code></pre>
+                        <pre><code class="language-ruby">{{ less_txt }}</code></pre>
 
-                    <p>Observamos la estructura general del registro, además, vemos que la dirección ip <span class="has-text-danger">113.161.192.227</span> está realizando el ataque, intentando forzar el usuario <span class="has-text-danger">administrator</span>, además, vemos que el evento del ID fué <span class="has-text-danger">4625</span>, entonces, usando expresiones regulares con la utilidad grep, y wc obtenemos cuantos ataques de fuerza bruta fueron realizados.</p>
-                    <pre><code class="language-bash">[arhoc@ArchLinux Bruteforce ]$ cat BTLO_Bruteforce_Challenge.txt | grep "Unknown user" | wc -l
-                        3103</code></pre>
+                        <p>Observamos la estructura general del registro, además, vemos que la dirección ip <span class="has-text-danger">113.161.192.227</span> está realizando el ataque, intentando forzar el usuario <span class="has-text-danger">administrator</span>, además, vemos que el evento del ID fué <span class="has-text-danger">4625</span>, entonces, usando expresiones regulares con la utilidad grep, y wc obtenemos cuantos ataques de fuerza bruta fueron realizados.</p>
+                        <pre><code class="language-bash">[arhoc@ArchLinux Bruteforce ]$ cat BTLO_Bruteforce_Challenge.txt | grep "Unknown user" | wc -l
+                            3103</code></pre>
 
-                    <p>Haciendo una simple consulta WHOIS, nos daremos cuenta de que la dirección IP que intentó el ataque se encontraba en <span class="has-text-danger">Vietnam</span>.</p>
-                    <p>Entonces, obtenemos los primeros y últimos puertos que nos muestra el registro, esto lo realizamos de manera sencilla haciendo uso de grep, awk, sort, head y tail.</p>
-                    <pre><code class="language-bash">{{ ports_range }}</code></pre>
+                        <p>Haciendo una simple consulta WHOIS, nos daremos cuenta de que la dirección IP que intentó el ataque se encontraba en <span class="has-text-danger">Vietnam</span>.</p>
+                        <p>Entonces, obtenemos los primeros y últimos puertos que nos muestra el registro, esto lo realizamos de manera sencilla haciendo uso de grep, awk, sort, head y tail.</p>
+                        <pre><code class="language-bash">{{ ports_range }}</code></pre>
 
-                    <p>Por lo tanto, el rango de puertos analizado se encuentra en <span class="has-text-danger">49162-65534</span>, y con esto concluímos el challenge.</p>
+                        <p>Por lo tanto, el rango de puertos analizado se encuentra en <span class="has-text-danger">49162-65534</span>, y con esto concluímos el challenge.</p>
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-    </>
+        </>
+    )
 }
