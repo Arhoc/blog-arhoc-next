@@ -87,9 +87,9 @@ export default function InjectionSeriesWriteup() {
                     <nav className="navbar">
                         <div className="container">
                             <div className="navbar-brand">
-                                <a className="navbar-item" href="/">
+                                <Link className="navbar-item" href="/">
                                     <h1 className="title has-text-light" style={{ fontFamily: 'Share Tech Mono' }}>FORENSE EN POTENCIA</h1>
-                                </a>
+                                </Link>
                                 <span className="navbar-burger" data-target="navbarMenuHeroB">
                                     <span></span>
                                     <span></span>
@@ -98,15 +98,15 @@ export default function InjectionSeriesWriteup() {
                             </div>
                             <div id="navbarMenuHeroB" className="navbar-menu">
                                 <div className="navbar-end">
-                                    <a className="navbar-item" href="/">
+                                    <Link className="navbar-item" href="/">
                                         Principal
-                                    </a>
-                                    <a className="navbar-item">
+                                    </Link>
+                                    <Link className="navbar-item">
                                         Blog
-                                    </a>
-                                    <a className="navbar-item">
+                                    </Link>
+                                    <Link className="navbar-item">
                                         Contacto
-                                    </a>
+                                    </Link>
                                 </div>
                             </div>
                         </div>
@@ -129,16 +129,16 @@ export default function InjectionSeriesWriteup() {
                         <div className="container">
                             <ul>
                                 <li>
-                                    <a>Part 1</a>
+                                    <Link>Part 1</Link>
                                 </li>
                                 <li>
-                                    <a>Part 2</a>
+                                    <Link>Part 2</Link>
                                 </li>
                                 <li>
-                                    <a>Part 3</a>
+                                    <Link>Part 3</Link>
                                 </li>
                                 <li className="is-active">
-                                    <a>Part 4</a>
+                                    <Link>Part 4</Link>
                                 </li>
                             </ul>
                         </div>
@@ -177,8 +177,8 @@ export default function InjectionSeriesWriteup() {
                                     className="has-text-danger">C:\\windows\\temp\\exp.exe</span>, además de eso, notamos la presencia de
                             &quot;notepad.exe&quot;, creo que más adelante revisaremos eso... Con esto tenemos la respuesta de las preguntas 3
                             y 4.</p>
-                        <p>Abramos este ejecutable entonces en <a className="has-text-link"
-                            href="https://es.wikipedia.org/wiki/Ghidra">GHidra</a>.</p>
+                        <p>Abramos este ejecutable entonces en <Link className="has-text-link"
+                            href="https://es.wikipedia.org/wiki/Ghidra">GHidra</Link>.</p>
                     </div>
                 </div>
             </section>
