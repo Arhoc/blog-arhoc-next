@@ -1,6 +1,5 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import Link from 'next/link'
 import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
 
@@ -88,9 +87,9 @@ export default function InjectionSeriesWriteup() {
                     <nav className="navbar">
                         <div className="container">
                             <div className="navbar-brand">
-                                <Link className="navbar-item" href="/">
+                                <a className="navbar-item" href="/">
                                     <h1 className="title has-text-light" style={{ fontFamily: 'Share Tech Mono' }}>FORENSE EN POTENCIA</h1>
-                                </Link>
+                                </a>
                                 <span className="navbar-burger" data-target="navbarMenuHeroB">
                                     <span></span>
                                     <span></span>
@@ -99,15 +98,15 @@ export default function InjectionSeriesWriteup() {
                             </div>
                             <div id="navbarMenuHeroB" className="navbar-menu">
                                 <div className="navbar-end">
-                                    <Link className="navbar-item" href="/">
+                                    <a className="navbar-item" href="/">
                                         Principal
-                                    </Link>
-                                    <Link className="navbar-item">
+                                    </a>
+                                    <a className="navbar-item">
                                         Blog
-                                    </Link>
-                                    <Link className="navbar-item">
+                                    </a>
+                                    <a className="navbar-item">
                                         Contacto
-                                    </Link>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -130,16 +129,16 @@ export default function InjectionSeriesWriteup() {
                         <div className="container">
                             <ul>
                                 <li>
-                                    <Link>Part 1</Link>
+                                    <a>Part 1</a>
                                 </li>
                                 <li>
-                                    <Link>Part 2</Link>
+                                    <a>Part 2</a>
                                 </li>
                                 <li>
-                                    <Link>Part 3</Link>
+                                    <a>Part 3</a>
                                 </li>
                                 <li className="is-active">
-                                    <Link>Part 4</Link>
+                                    <a>Part 4</a>
                                 </li>
                             </ul>
                         </div>
@@ -178,8 +177,8 @@ export default function InjectionSeriesWriteup() {
                                     className="has-text-danger">C:\\windows\\temp\\exp.exe</span>, además de eso, notamos la presencia de
                             &quot;notepad.exe&quot;, creo que más adelante revisaremos eso... Con esto tenemos la respuesta de las preguntas 3
                             y 4.</p>
-                        <p>Abramos este ejecutable entonces en <Link className="has-text-link"
-                            href="https://es.wikipedia.org/wiki/Ghidra">GHidra</Link>.</p>
+                        <p>Abramos este ejecutable entonces en <a className="has-text-link"
+                            href="https://es.wikipedia.org/wiki/Ghidra">GHidra</a>.</p>
                     </div>
                 </div>
             </section>

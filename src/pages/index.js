@@ -1,6 +1,5 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import Link from 'next/link'
 import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
 
@@ -22,9 +21,9 @@ export default function Home() {
           <nav className="navbar">
             <div className="container">
               <div className="navbar-brand">
-                <Link className="navbar-item" href="/home">
+                <a className="navbar-item" href="/home">
                   <h1 className="title has-text-light" style={{ fontFamily: 'Share Tech Mono' }}>FORENSE EN POTENCIA</h1>
-                </Link>
+                </a>
                 <span className="navbar-burger" data-target="navbarMenuHeroB">
                   <span></span>
                   <span></span>
@@ -33,15 +32,15 @@ export default function Home() {
               </div>
               <div id="navbarMenuHeroB" className="navbar-menu">
                 <div className="navbar-end">
-                  <Link className="navbar-item is-active" href="/home">
+                  <a className="navbar-item is-active" href="/home">
                     Principal
-                  </Link>
-                  <Link className="navbar-item">
+                  </a>
+                  <a className="navbar-item">
                     Blog
-                  </Link>
-                  <Link className="navbar-item">
+                  </a>
+                  <a className="navbar-item">
                     Contacto
-                  </Link>
+                  </a>
                 </div>
               </div>
             </div>
@@ -63,14 +62,14 @@ export default function Home() {
       <section className="hero is-halfheight">
         <div className="hero-body animated-element">
           <div className="container has-background-black-ter">
-            <Link href="../blog/bruteforce-writeup" className="router-link" router-link-active="active">
+            <a href="../blog/bruteforce-writeup" className="router-link" router-link-active="active">
               <section className="hero is-halfheight bruteforce-banner m-4">
                 <div className="container has-text-centered">
                   <h1 className="title has-text-light is-size-3 m-2">Post: Bruteforce</h1>
                   <h2 className="subtitle has-text-grey-lighter mt-2">WriteUp de un challenge sencillo, donde debemos analizar un registro en formato .csv y obtener datos de un ataque a un servidor RDP.</h2>
                 </div>
               </section>
-            </Link>
+            </a>
           </div>
         </div>
       </section>
@@ -78,7 +77,7 @@ export default function Home() {
       <section className="hero is-halfheight">
         <div className="hero-body animated-element">
           <div className="container has-background-black-ter">
-            <Link href="../blog/injection-series-writeup" className="router-link" router-link-active="active">
+            <a href="../blog/injection-series-writeup" className="router-link" router-link-active="active">
               <section className="hero is-halfheight injection-banner m-4">
                 <div className="container has-text-centered">
                   <h1 className="title has-text-light is-size-3 m-2">Post: Injection Series Part 4</h1>
@@ -87,7 +86,7 @@ export default function Home() {
                     tratan temas referentes a la ingeniería inversa.</h2>
                 </div>
               </section>
-            </Link>
+            </a>
           </div>
         </div>
       </section>
