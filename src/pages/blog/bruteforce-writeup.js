@@ -150,7 +150,7 @@ export default function BruteForceWriteup() {
                         <div className="container">
                             <div className="navbar-brand">
                                 <a className="navbar-item" href="/home">
-                                    <h1 className="title has-text-light" style="font-family: 'Share Tech Mono';">FORENSE EN POTENCIA
+                                    <h1 className="title has-text-light" style={{fontFamily: 'Share Tech Mono'}}>FORENSE EN POTENCIA
                                     </h1>
                                 </a>
                                 <span className="navbar-burger" data-target="navbarMenuHeroB">
