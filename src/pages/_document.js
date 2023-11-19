@@ -24,7 +24,7 @@ export default function Document() {
 
         <link rel="preconnect" href="https://fonts.googleapis.com"></link>
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin></link>
-        <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Creepster&family=Goldman&family=Rowdies&family=Share+Tech+Mono&display=swap" rel="stylesheet"></link>
+        <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Creepster&family=Rowdies&family=Share+Tech+Mono&display=swap" rel="stylesheet"></link>
 
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism.min.css"></link>
       </Head>
