@@ -73,12 +73,26 @@ export default function Home() {
                                 <button class="button is-success">Descargar Spotify Premium v1.1.22.633</button>
                             </a>
                         </center>
-                        <p> Extrae "Spotify Crack by Zuptil.zip". <br/>
-                            Abre la carpeta "Spotify-Desktop_v1.1.22.633 <br/>
-                            Ejecuta "SpotifyFullSetup_v1.1.22.633.exe" e instala Spotify <br/>
-                            Una vez que se abra Spotify, cierra la aplicación <br/> 
-                            Ejecuta "SpotifyPatch.bat". <br/>
+                        <br />
+
+                        <img src="https://user-images.githubusercontent.com/56351738/151934393-70cde3db-62f7-48d7-8250-dbb2d741226f.png"></img>
+                    </div>
+                </div>
+            </section>
+
+            <section className="container">
+                <div className="box has-background-black-ter has-text-light has-text-left mt-5">
+                    <h1 className="title has-text-light">Instrucciones</h1>
+
+                    <div className="content">
+                        <p> Extrae "Spotify Crack by Zuptil.zip". <br />
+                            Abre la carpeta "Spotify-Desktop_v1.1.22.633 <br />
+                            Ejecuta "SpotifyFullSetup_v1.1.22.633.exe" e instala Spotify <br />
+                            Una vez que se abra Spotify, cierra la aplicación <br />
+                            Ejecuta "SpotifyPatch.bat". <br />
                             Disfruta de música y podcasts sin publicidad</p>
+
+                        <img src="https://i.redd.it/23shsitmn8n21.jpg"></img>
                     </div>
                 </div>
             </section>
