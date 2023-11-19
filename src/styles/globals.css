@@ -165,3 +165,10 @@ span.token.number {
   text-align: center;
 }
 
+.title, .subtitle {
+  font-family: 'Black Ops One';
+}
+
+/*.subtitle {
+  font-family: 'Goldman';
+}*/

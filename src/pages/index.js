@@ -87,7 +87,7 @@ export default function Home() {
                   <h1 className="title has-text-light is-size-3 m-2">Post: Injection Series Part 4</h1>
                   <h2 className="subtitle has-text-grey-lighter mt-2">WriteUp de la cuarta parte del challenge &quot;Injection Series&quot;,
                     donde se
-                    tratan temas referentes a la ingeniería inversa.</h2>
+                    tratan temas referentes a la ingeniería inversa en ejecutables PE.</h2>
                 </div>
               </section>
             </a>
