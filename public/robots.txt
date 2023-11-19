@@ -1,0 +1,9 @@
+User-agent: *
+Disallow: /_vercel/
+
+User-agent: Googlebot
+Disallow: /_vercel/
+
+User-agent: Bingbot
+Disallow: /_vercel/
+
