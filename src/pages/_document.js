@@ -3,6 +3,7 @@ import { Html, Head, Main, NextScript } from 'next/document'
 export default function Document() {
   return (
     <Html lang="es" className='has-background-grey-darker'>
+      
 
       <Head>
         <title>Un forense en potencia: El blog de Aidon.</title>

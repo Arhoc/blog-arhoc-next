@@ -17,6 +17,10 @@ export default function Home() {
   return (
     <>
       <section className="hero is-info is-large banner">
+      <video autoPlay muted loop className="video-background">
+        <source src="/assets/banner-animated.mp4" type="video/mp4" />
+        Tu navegador no soporta el elemento de video.
+      </video>
         <div className="hero-head">
           <nav className="navbar">
             <div className="container">

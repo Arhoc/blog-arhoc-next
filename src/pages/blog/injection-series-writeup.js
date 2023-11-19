@@ -73,16 +73,20 @@ const asm_decoded = `CreateProcessA(
 );`;
 
 export default function InjectionSeriesWriteup() {
-    const [ style, setStyle ] = useState({})
-  useEffect(() => {
-    import('react-syntax-highlighter/dist/cjs/styles/prism/twilight')
-    .then(mod => setStyle(mod.default));
-  })
+    const [style, setStyle] = useState({})
+    useEffect(() => {
+        import('react-syntax-highlighter/dist/cjs/styles/prism/twilight')
+            .then(mod => setStyle(mod.default));
+    })
 
 
     return (
         <>
             <section className="hero is-info is-large banner">
+                <video autoPlay muted loop className="video-background">
+                    <source src="/assets/banner-animated.mp4" type="video/mp4" />
+                    Tu navegador no soporta el elemento de video.
+                </video>
                 <div className="hero-head">
                     <nav className="navbar">
                         <div className="container">
